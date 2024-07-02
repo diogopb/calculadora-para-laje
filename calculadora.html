@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Laje</title>
+</head>
+<body>
+    <img src="LOGO-ATUALIZADA.png" id="logo" alt="Logo" width="200">
+    <h1>Cálculo Laje</h1>
+    <form id="form">
+        <label for="largura">Largura (m)</label>
+        <input type="number" id="largura" name="largura" step="any" required>
+        <br>
+        <label for="altura">Altura (m)</label>
+        <input type="number" id="altura" name="altura" step="any" required>
+        <br>
+        <label for="tipoVigotas">Usar para calcular as vigotas:</label>
+        <select id="tipoVigotas" name="tipoVigotas">
+            <option value="largura">Largura</option>
+            <option value="altura">Altura</option>
+        </select>
+        <br><br>
+        <button type="submit">Calcular</button>
+    </form>
+
+    <div id="resultado" style="display: none;">
+        <h2>Resultado:</h2>
+        <p>Área Total: <span id="area"></span> m²</p>
+        <p>Quantidade de Vigotas: <span id="quantidadeVigotas"></span> un</p>
+        <p>Quantidade de Isopor: <span id="quantidadeIsopor"></span> un</p>
+
+        <h2>Informações:</h2>
+        <p>Cimento: <span id="quantidadeCimento"></span> sacos</p>
+        <p>Areia: <span id="quantidadeAreiaLata"></span> latas ou <span id="quantidadeAreiaMetro"></span> m³</p>
+        <p>Brita: <span id="quantidadeBritaLata"></span> latas ou <span id="quantidadeBritaMetro"></span> m³</p>
+        <p>Vergalhões: <span id="quantidadeVergalhao"></span> un (<span id="quantidadeVergalhaoM2"></span> m²) ou Malha Pop: <span id="quantidadeMalha"></span> un</p>
+    </div>
+
+    <link rel="stylesheet" href="style.css"> 
+    <script src="app.js"></script>
+</body>
+</html>
